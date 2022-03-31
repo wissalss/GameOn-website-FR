@@ -19,6 +19,7 @@ body {
   font-size: 18px;
   max-width: 1300px;
   margin: 0 auto;
+  
 }
 
 p {
@@ -69,7 +70,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -77,7 +80,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -91,16 +96,6 @@ img {
 }
 
 
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -111,7 +106,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
 
 }
 
@@ -169,6 +163,8 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+
+
 .content {
   margin: 5% auto;
   width: 100%;
@@ -186,6 +182,9 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 label {
@@ -219,6 +218,7 @@ input {
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
+  
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
@@ -226,12 +226,14 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
+} 
+
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -333,6 +335,8 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+
 /* custom select styles */
 .custom-select {
   position: relative;
@@ -495,12 +499,12 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 3.3rem;
     white-space: normal;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .hero-img img {
     border-radius: 10px;
@@ -527,3 +531,52 @@ footer {
   }
 }
 
+/* Modification maquettes */ 
+
+@media screen and (max-width: 450px) {
+  body {
+    margin: 20px 30px;
+  }
+
+  main {
+    font-size: 120%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  .topnav {
+    margin: 0;
+  }
+
+
+  .topnav a {
+    display: none;
+    padding: 5px 5px;
+  }
+
+  /* Logo */ 
+  img {
+    margin-top: 10px;
+    width: 100px;
+    height: 20px;
+  }
+
+  .hero-content {
+    font-size: 3rem;
+    padding: 0;
+    padding-top: 20px;
+
+  }
+
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+
+  p.hero-text {
+    font-weight: 400;
+    font-size: 14px;
+    padding-right: 105px;
+    margin-top: 15px;
+  }
+}
