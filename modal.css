@@ -227,11 +227,6 @@ input {
   border: 2px solid #e54858;
 }
 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} 
 
 
 .checkbox-label,
@@ -324,7 +319,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-close {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -579,4 +575,10 @@ footer {
     padding-right: 105px;
     margin-top: 15px;
   }
+}
+
+.error {
+  display: none;
+  font-size: 12px;
+  color: #ff0000;
 }

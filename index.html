@@ -54,15 +54,13 @@
         </button>
       </div>
 
-      <div class="bground">
+      <div class="bground modal-form">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
             <form
               name="reserve"
-              action="index.html"
-              method="get"
-              onsubmit="return validate();"
+              class="modal-inscription-form" novalidate
             >
               <div
                 class="formData">
@@ -73,7 +71,6 @@
                   id="first"
                   name="first"
                   placeholder="ex:Jean"
-                  minlength="2"
                 />
                 <span class="firstName error">
                   * Veuillez entrer 2 caractères ou plus pour le champ du
@@ -107,7 +104,7 @@
                   name="email"
                   placeholder="ex: jean.dupont@gmail.com"
                 />
-                <span class="myEmail error">
+                <span class="Email error">
                   * Veuillez entrer une adresse email valide.
                 </span>
                 <br>
@@ -121,7 +118,7 @@
                   id="birthdate"
                   name="birthdate"
                 />
-                <span class="mybirthdate error">
+                <span class="birthdate error">
                   * Vous devez entrer votre date de naissance.
                 </span>
                 <br>
@@ -131,7 +128,7 @@
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               
-              <span class="myQuantityTournament error">
+              <span class="QuantityTournament error">
                 * Indiquer au moins un "0" si c'est votre première fois.
               </span>
             </div>
@@ -205,7 +202,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <span class="myLocation error">
+                <span class="Location error">
                   * Vous devez entrer une ville malgré tout.
                 </span>
               </div>
@@ -216,14 +213,14 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
+                  name="checkbox1"
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
-                  <span class="checkbox-icon"></span>
+                <label class="checkbox2-label" for="checkbox1" >
+                  <span class="checkbox-icon accept"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <span class="myAcceptCondition error">
+                <span class="AcceptCondition error">
                   * Vous devez acceptez les conditions d'utilisation.
                 </span>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
@@ -243,6 +240,26 @@
           </div>
         </div>
       </div>
+
+      <!-- Comment  -->
+
+      <div class="bground modal-confirm">
+        <div class="content">
+          
+          <span class="close"></span>
+          <div class="modal-body">
+            <div class="modal-success">
+              <span class="thanks">
+                Merci d'avoir soumis votre inscription!
+              </span>
+              
+              <input class="btn-close" type="submit" value="Fermer" />
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </main>
     <footer>
       <p class="copyrights">
