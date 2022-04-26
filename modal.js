@@ -40,11 +40,13 @@ function closeModal1() {
     modalBgConfirm.style.display = 'none'
 }
 
-
 function closeModal2() {
     modalBgConfirm.style.display = 'none'
 }
 
+// #2 TODO : 
+
+// Check if input values are ok 
 
 function checkform(type, idelement, iderror) {
 
@@ -102,8 +104,8 @@ function checkform(type, idelement, iderror) {
 }
 
 
+// Form validation 
 
-// #TODO 2
 function validate(event) {
     event.preventDefault()
 
@@ -120,6 +122,8 @@ function validate(event) {
     }
 
 }
+
+// If form is valide, close it and show the confirmation modal 
 
 function confirm() {
 
