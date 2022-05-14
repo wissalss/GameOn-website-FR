@@ -66,6 +66,16 @@ function checkform(type, idelement, iderror) {
             return ""
         }
     } else if (type === "date") {
+        const todayDate = new Date();
+        todayDate.setFullYear(todayDate.getFullYear() - 10);
+        // Validation de date de naissance à partire de 10ans 
+        const birthDateEntry = new Date(item.value);
+        if (todayDate < birthDateEntry || item.value === "") {
+            document.getElementById(iderror).style.display = "block"
+            item.style.borderColor = "red"
+            return ""
+        }
+    } else if (type === "number") {
         if (item.value === "") {
             document.getElementById(iderror).style.display = "block"
             item.style.borderColor = "red"
@@ -113,7 +123,7 @@ function validate(event) {
     var lastName = checkform("text", "last", "lastError")
     var email = checkform("email", "email", "emailError")
     var birthday = checkform("date", "birthday", "birthdayError")
-    var quantity = checkform("date", "quantity", "quantityError")
+    var quantity = checkform("number", "quantity", "quantityError")
     var location = checkform("radio", "location", "locationError")
     var accept = checkform("checkbox", "checkbox1", "acceptError")
 
